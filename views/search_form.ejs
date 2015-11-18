@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html>
+<head><% include partials/template/head.ejs%></head>
+<body>
+<!--Navbar-->
+	<nav><% include partials/template/header.ejs%></nav>
+	<div ID ="extra_padding"></div>
+	<div ID= "searchpicture">
+		<div class = "container blackbox frontpagemain">
+        <div><% include partials/content/search_area.ejs%></div>
+		</div>
+	</div>
+	<div class = "container">
+	<% if (results === false) { %>
+	<% } else { %>
+		<% for (var i in data) { %> 
+<!-- 			<p> potato <%= data[i]["apartment_id"] %> </p> -->
+			<div> <% include partials/content/search_results.ejs%> </div>
+		<% } %>
+		</div>
+	<% } %>		
+	<% include partials/template/jsdefaults.ejs %> 
+</body>
+</html>

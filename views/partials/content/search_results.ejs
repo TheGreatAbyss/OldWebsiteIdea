@@ -1,0 +1,40 @@
+<div class = "row" ID = "result_listings">
+	<div class = "col-sm-3 col-md-3"><!-- pic area -->
+	<a href="#" class="thumbnail" class="img-responsive">
+     	<img src="../images/example_thumbnail.jpg" alt="...">
+    </a>
+	</div>
+	<div class = "col-sm-8 col-md-8"><!-- info area -->
+	    <div class = "row"><!-- address row -->
+		   <h3><%= data[i]["address_1"] %></h3>
+		</div>
+		<div class = "row"><!-- info row -->
+			<div class = "col-md-4 col-sm-4 "><!-- first set of info -->
+				<div class = "row">
+					<p>$<%= data[i]["price"] %></p>
+				</div>
+				<div class = "row">
+					<p><%= data[i]["neighborhood"] %></p>
+				</div>
+				<div class = "row">
+					<p><%= data[i]["bedrooms"] %> Beds</p>
+				</div>
+				<div class = "row">
+					<p><%= data[i]["bathrooms"] %> Baths</p>
+				</div>
+				<% if (data[i]["available_date"] === null) {%>
+					<% 	} else { %>
+						<div class = "row"><p>Available On <%= data[i]["available_date"] %></p></div>
+					<% 	}  %>						
+			</div>
+			<div class = "col-md-8 col-sm-8 col-lg-8"><!-- second set of info -->
+				<div class = "row">
+					<p>Listed By <%= data[i]["listing_by"] %></p>
+				</div>
+				<div class = "row">
+					<p><%= data[i]["comments"] %></p>
+				</div>				
+			</div>
+		</div>
+	</div>
+</div>

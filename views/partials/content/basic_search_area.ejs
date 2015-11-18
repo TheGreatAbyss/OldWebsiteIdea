@@ -1,0 +1,114 @@
+
+<div class = "row">
+    <div class = "col-md-12 col-sm-12 ">
+        <form  role="form">
+            <div class="form-group">
+                <label for="locations" class = "search-text">Locations</label>
+                <div class = "input-group"> 
+                    <input type="search" class="form-control" list="hoods" id="locations" placeholder="Ex. Fort Greene" 
+                    se:behavior="selector"> 
+                   <!--  multiple ="true" se:behavior="selector">  -->
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<br>
+<!-- Search Area Second Row -->
+<div class = "row"> <!-- Min Price -->
+    <div class = "col-md-2 col-sm-3 ">
+        <form  role="form">
+            <div class="form-group">
+                <label for="minprice" class = "search-text">Min Price</label>
+                <div class = "input-group"> 
+                    <div class="input-group-addon">$</div>
+                    <input type="number" class="form-control" id="minprice" placeholder = "0" 
+                    <% if (locals.minprice != 0) { %>
+                        value= "<%= locals.minprice %>" 
+                       <% } %>
+                    >
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class = "col-md-2 col-sm-3"> <!-- Max Price -->       
+        <form  role="form">            
+            <div class="form-group">
+                <label for="maxprice" class = "search-text">Max Price</label>
+                <div class = "input-group"> 
+                    <div class="input-group-addon">$</div>
+                    <input type="number" class="form-control" id="maxprice" placeholder = "0" 
+                    <% if (locals.maxprice != 0) { %>
+                        value= "<%= locals.maxprice %>" 
+                       <% } %>
+                    >
+                </div>
+            </div>
+        </form>
+    </div>
+            
+    <div class = "col-md-2 col-sm-3"> <!-- Bedrooms -->
+        <form  role="form"> <!-- Main Selector --> 
+            <div class = "form-group">         
+                <label for="bedrooms" class = "search-text">Bedrooms</label>
+                <select class="form-control" ID="bedrooms">
+                    <option value = "1" <% if (locals.bedrooms === "1") { %> selected = "selected" <% } %> >Studio</option>                        
+                    <option value = "2" <% if (locals.bedrooms === "2") { %> selected = "selected" <% } %> >1</option>
+                    <option value = "3" <% if (locals.bedrooms === "3") { %> selected = "selected" <% } %> >1.5</option>
+                    <option value = "4" <% if (locals.bedrooms === "4") { %> selected = "selected" <% } %> >2</option>
+                    <option value = "5" <% if (locals.bedrooms === "5") { %> selected = "selected" <% } %> >2.5</option>
+                    <option value = "6" <% if (locals.bedrooms === "6") { %> selected = "selected" <% } %> >3</option>
+                    <option value = "7" <% if (locals.bedrooms === "7") { %> selected = "selected" <% } %> >3.5</option>
+                    <option value = "8" <% if (locals.bedrooms === "8") { %> selected = "selected" <% } %> >4</option>
+                    <option value = "9" <% if (locals.bedrooms === "9") { %> selected = "selected" <% } %> >4.5</option>
+                    <option value = "10" <% if (locals.bedrooms === "10") { %> selected = "selected" <% } %> >5+</option>
+                </select>
+            </div>
+        </form>  <!-- Main Selector --> 
+        <div class="checkbox"> <!-- Checkbox -->
+            <label class = "search-text">
+                <input type="checkbox" ID ="bedmore" <% if (locals.bedmore === "true" || !locals.bedmore) { %> checked <% } %> >
+                <% console.log(locals.bedmore) %>
+                <b>Or More</b>
+            </label>
+        </div> <!-- Checkbox -->
+    </div> <!-- Bedrooms -->
+
+    <div class = "col-md-2 col-sm-3"> <!-- Bathrooms -->
+        <form  role="form">   
+            <div class = "form-group">         
+                <label for="Bathrooms" class = "search-text">Bathrooms</label>
+                <select class="form-control" ID="bathrooms">                           
+                    <option <% if (locals.bathrooms === "1")   { %> selected = "selected" <% } %> >1</option>
+                    <option <% if (locals.bathrooms === "1.5") { %> selected = "selected" <% } %> >1.5</option>
+                    <option <% if (locals.bathrooms === "2")   { %> selected = "selected" <% } %> >2</option>
+                    <option <% if (locals.bathrooms === "2.5") { %> selected = "selected" <% } %> >2.5</option>
+                    <option <% if (locals.bathrooms === "3")   { %> selected = "selected" <% } %> >3</option>
+                    <option <% if (locals.bathrooms === "3.5") { %> selected = "selected" <% } %> >3.5</option>
+                    <option <% if (locals.bathrooms === "4")   { %> selected = "selected" <% } %> >4</option>
+                    <option <% if (locals.bathrooms === "4.5") { %> selected = "selected" <% } %> >4.5</option>
+                    <option <% if (locals.bathrooms === "5")   { %> selected = "selected" <% } %> >5</option>
+                </select>
+            </div>
+        </form>
+        <div class="checkbox"> <!-- Checkbox -->
+            <label class = "search-text">
+                <input type="checkbox" ID = "bathmore" <% if (locals.bathmore === "true" || !locals.bathmore) { %> checked <% } %> >
+                <b>Or More</b>
+            </label>
+        </div> <!-- Checkbox -->
+    </div><!-- Bathrooms -->
+
+    <div class = "col-md-2 col-sm-3">
+        <form role ="form">
+            <div class = "form-group">
+            <label for="searchbtn" class = "search-text"></label>
+                <button type="button" class="btn btn-info btn-block search-text" ID="searchbtn">Search</button>
+            </div>
+        </form>
+    </div>
+</div><!--  end row -->
+    <br>
+    <br>

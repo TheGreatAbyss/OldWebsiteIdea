@@ -1,0 +1,126 @@
+<div class = "row"><!-- Available Date -->
+    <div class = "col-md-6 col-sm-6 ">
+        <form  role="form">
+            <div class="form-group">
+                <label for="datepicker" class = "search-text">Available By</label>
+                <div class = "input-group"> 
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
+                    <input type="text" class="form-control" id="datepicker">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class = "row" style = "color: white"><!-- checkbox row -->
+    <div class = "col-md-4 col-sm-4 "><!-- Table 1 -->
+        <div class="table-responsive checktable">
+            <table class="table table-condensed" border = "0">
+              <tbody>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "By_Owner" <% if (locals.By_Owner === "true") { %> checked <% } %> >
+                           Listings By Owner Only
+                        </label>
+                </td></tr>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Dishwasher" <% if (locals.Dishwasher === "true") { %> checked <% } %> >
+                        Dishwasher
+                    </label>
+                </td></tr>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Laundry" <% if (locals.Laundry === "true") { %> checked <% } %> >
+                            Laundry
+                    </label>
+                </td></tr>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Dogs" <% if (locals.Dogs === "true") { %> checked <% } %> >
+                            Dogs
+                    </label>
+                </td></tr>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Cats" <% if (locals.Cats === "true") { %> checked <% } %> >
+                           Cats
+                    </label>
+                </td></tr>                                
+              </tbody>
+            </table>
+        </div>      
+    </div>
+    <div class = "col-md-4 col-sm-4 "><!-- Table 2 -->        
+        <div class="table-responsive">
+            <table class="table table-condensed">
+              <tbody>  
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Other_Pets"  <% if (locals.Other_Pets === "true") { %> checked <% } %> >
+                             Other Pets
+                    </label>
+                </td></tr>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Outdoor"  <% if (locals.Outdoor === "true") { %> checked <% } %> >
+                            Outdoor Space
+                    </label>
+                </td></tr>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Fireplace"  <% if (locals.Fireplace === "true") { %> checked <% } %> >
+                            Fireplace
+                    </label>
+                </td></tr>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Furnished"  <% if (locals.Furnished === "true") { %> checked <% } %> >
+                            Furnished
+                    </label>
+                </td></tr>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Gym"  <% if (locals.Gym === "true") { %> checked <% } %> >
+                            Gym
+                    </label>
+                </td></tr>  
+              </tbody>
+            </table>
+        </div>
+    </div>               
+    <div class = "col-md-4 col-sm-4 "><!-- Table 3 -->        
+        <div class="table-responsive">
+            <table class="table table-condensed">
+              <tbody> 
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Pool"  <% if (locals.Pool === "true") { %> checked <% } %> >
+                            Pool
+                    </label>
+                </td></tr>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Storage"  <% if (locals.Storage === "true") { %> checked <% } %> >
+                            Storage Space Available
+                    </label>
+                </td></tr>
+                <tr><td>        
+                    <label class = "checkboxes">
+                        <input type="checkbox" ID= "Parking"  <% if (locals.Parking === "true") { %> checked <% } %> >
+                            Available Parking
+                    </label>
+                </td></tr>
+              </tbody>
+            </table>
+        </div>
+    </div>        
+</div>
+<div class = "col-md-2 col-sm-3">
+    <form role ="form">
+        <div class = "form-group">
+        <label for="searchbtn" class = "search-text"></label>
+            <button type="button" class="btn btn-info btn-block search-text" ID="searchbtn2">Search</button>
+        </div>
+    </form>
+</div>
